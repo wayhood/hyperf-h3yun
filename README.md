@@ -2,7 +2,7 @@
 
 config
 ```
-php80 bin/hyperf.php vendor:publish wayhood/h3yun
+php80 bin/hyperf.php vendor:publish wayhood/hyperf-h3yun
 ```
 
 add in .env
