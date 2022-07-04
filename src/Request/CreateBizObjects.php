@@ -14,15 +14,25 @@ class CreateBizObjects extends AbstractRequest
     // 需要查询的表单编码
     public ?string $SchemaCode;
 
-    // 需要查询的数据ID，每个表单都有唯一的ObjectId
+    /**
+     * 需要查询的数据ID，每个表单都有唯一的ObjectId
+     * @var BizObject[]
+     */
     public array $BizObjectArray = [];
 
     public function getParams(): array
     {
+        $BizObjectArray = [];
+        foreach($this->BizObjectArray as $item) {
+            if ($item instanceof BizObject) {
+                $BizObjectArray[] = (string)$item;
+            }
+        }
+
         return [
             'ActionName' => $this->ActionName,
             'SchemaCode' => $this->SchemaCode,
-            'BizObjectArray' => $this->BizObjectArray,
+            'BizObjectArray' => $BizObjectArray,
             'IsSubmit' => $this->IsSubmit,
         ];
     }

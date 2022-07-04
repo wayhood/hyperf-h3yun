@@ -44,11 +44,11 @@ print_r($ret);
 $cbos = make(CreateBizObjects::class);
 $cbos->SchemaCode = 'D000576df832c5a92c74d398c60698c5da7ddb5';
 $cbos->BizObjectArray = [
-    (string) $bo,
-    (string) $bo,
-    (string) $bo,
-    (string) $bo,
-    (string) $bo,
+    $bo,
+    $bo,
+    $bo,
+    $bo,
+    $bo,
 ];
 $ret = $cbos->request();
 print_r($ret);
