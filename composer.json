@@ -1,0 +1,40 @@
+{
+    "name": "wayhood/hyperf-h3yun",
+    "description": "call h3yun api",
+    "type": "library",
+    "keywords": [
+        "php",
+        "hyperf",
+        "h3yun"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "ext-swoole": ">=4.6",
+        "hyperf/di": "~v3.0.x-dev",
+        "hyperf/macroable": "~3.0.x-dev",
+        "hyperf/coordinator": "~3.0.x-dev",
+        "hyperf/contract": "~3.0.x-dev",
+        "hyperf/context": "~3.0.x-dev",
+        "hyperf/utils": "~3.0.x-dev",
+        "hyperf/guzzle": "~3.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wayhood\\H3yun\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "co-phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 300M -l 0 ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Wayhood\\H3yun\\ConfigProvider"
+        }
+    }
+}
