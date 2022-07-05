@@ -8,12 +8,6 @@ class BizObject
     public ?string $OwnerId;
     private array $fields = [];
 
-    /**
-     * @param string $CreateBy
-     * @param string $OwnerId
-     * @param bool $IsSubmit
-     */
-
     public function __set($name, $value) {
         $this->fields[$name] = $value;
     }
