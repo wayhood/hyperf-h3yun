@@ -4,8 +4,8 @@ namespace Wayhood\H3yun\Request;
 
 class BizObject
 {
-    public string $CreateBy;
-    public string $OwnerId;
+    public ?string $CreateBy;
+    public ?string $OwnerId;
     private array $fields = [];
 
     /**
